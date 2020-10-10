@@ -4,11 +4,7 @@ import './App.css';
 
 class App extends React.Component{ 
 
-  componentDidMount(){
-    fetch('http://localhost:3000/rental_items')
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-  }
+
 
   render() {
   return (
