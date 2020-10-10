@@ -1,6 +1,6 @@
 
 
-export default function familyReducer(state = {families: []} ){
+export default function familyReducer(state = {families: []}, action ){
 
-
+    return state 
 }
