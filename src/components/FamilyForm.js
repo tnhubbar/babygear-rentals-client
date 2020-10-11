@@ -15,7 +15,7 @@ class FamilyForm extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addFamily
+        this.props.addFamily(this.state)
     }
 
     render(){
