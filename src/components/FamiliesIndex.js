@@ -6,7 +6,7 @@ const FamiliesIndex = (props) => {
 return (
     <div>
         {props.families.map(family =>
-           <li key={family.id}> {family.name}</li>
+           <li key={family.id}> {family.name} - {family.name}</li>
             )}
     </div>
 )

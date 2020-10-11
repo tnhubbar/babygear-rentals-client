@@ -14,7 +14,7 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
-                <FamilyForm/>
+                <FamilyForm/><br/>
                 <FamiliesIndex families={this.props.families}/>
             </div>
         )
