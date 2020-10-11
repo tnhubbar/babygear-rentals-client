@@ -7,12 +7,14 @@ class RentalItemForm extends React.Component{
     state = {
         item_name: '',
         age: '',
-        category: '',
-        status: ''
+        category: 'Transport Items',
+        status: 'Available'
     }
 
-    handleChange = () => {
-
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
 
@@ -22,17 +24,17 @@ class RentalItemForm extends React.Component{
                 Enter Your Rental Items Here!
                 <form>
                     <label>Item Name: </label>
-                    <input type='text' placeholder="Name" name="item_name" value={this.state.item_name} /><br/>
+                    <input type='text' placeholder="Name" name="item_name" value={this.state.item_name} onChange={this.handleChange} /><br/>
                     <label>Item Age in Years: </label>
-                    <input type='text' placeholder="Age" name="age" value={this.state.age} /><br/>
+                    <input type='text' placeholder="Age" name="age" value={this.state.age} onChange={this.handleChange}/><br/>
                     <label>Item Category </label>
-                    <select name="category" value={this.state.category}>
+                    <select name="category" value={this.state.category} onChange={this.handleChange}>
                     <option>Toys</option>
                     <option>Furniture</option>
                     <option>Transport Items</option>
                     </select><br/>
                     <label>Item Status </label>
-                    <select name="status" value={this.state.status}>
+                    <select name="status" value={this.state.status} onChange={this.handleChange}>
                     <option>Available</option>
                     <option>Reserved</option>
                     </select><br/>
