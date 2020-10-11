@@ -1,9 +1,10 @@
 import React from 'react'
 import FamiliesIndex from '../components/FamiliesIndex.js'
 import FamilyForm from '../components/FamilyForm.js'
+import FamilyShow from '../components/FamilyShow.js'
 import {connect} from 'react-redux'
 import {fetchFamilies} from '../actions/fetchFamilies.js'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 
 class FamiliesContainer extends React.Component{
@@ -15,8 +16,11 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
+                <Switch>
                 <Route path='/families/new' component={FamilyForm} />
-                <FamiliesIndex families={this.props.families}/>
+                <Route path='/families/:id'  render={(routerProps) => <FamilyShow {...routerProps} families={this.props.families}/> } />
+                <Route path='/families' render={() => <FamiliesIndex families={this.props.families}/> } />
+                </Switch>
             </div>
         )
     }

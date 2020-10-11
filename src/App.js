@@ -14,7 +14,7 @@ class App extends React.Component{
   render() {
   return (
     <div className="App">
-      This will be my project 
+      Baby Gear Rentals!
       <FamiliesContainer/>
     </div>
   );
