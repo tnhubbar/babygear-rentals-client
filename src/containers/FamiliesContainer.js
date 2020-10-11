@@ -3,6 +3,7 @@ import FamiliesIndex from '../components/FamiliesIndex.js'
 import FamilyForm from '../components/FamilyForm.js'
 import {connect} from 'react-redux'
 import {fetchFamilies} from '../actions/fetchFamilies.js'
+import {Route} from 'react-router-dom'
 
 
 class FamiliesContainer extends React.Component{
@@ -14,7 +15,7 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
-                <FamilyForm/><br/>
+                <Route path='/families/new' component={FamilyForm} />
                 <FamiliesIndex families={this.props.families}/>
             </div>
         )
