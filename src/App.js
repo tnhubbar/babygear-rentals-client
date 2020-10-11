@@ -2,19 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux'
+import {fetchFamilies} from './actions/fetchFamilies.js'
+import FamiliesContainer from './containers/FamiliesContainer'
 
 class App extends React.Component{ 
 
-  componentDidMount(){
-    fetch('http://localhost:3000/families')
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-}
+  //componentDidMount(){
+   //this.props.fetchFamilies()
+//}
 
   render() {
   return (
     <div className="App">
       This will be my project 
+      <FamiliesContainer/>
     </div>
   );
 }
@@ -22,4 +23,4 @@ class App extends React.Component{
 
 }
 
-export default connect(null, {fetchFamilies})(App);
+export default connect()(App);

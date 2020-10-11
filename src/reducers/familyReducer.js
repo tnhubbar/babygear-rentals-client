@@ -2,5 +2,11 @@
 
 export default function familyReducer(state = {families: []}, action ){
 
-    return state 
+    switch (action.type){
+        case 'FETCH_FAMILIES':
+            return {families: action.payload}
+            default: 
+            return state
+    }
+
 }
