@@ -5,6 +5,8 @@ export const addFamily = (data) => {
             method: 'POST', 
             body: JSON.stringify(data)
         })
+        .then(resp => resp.json())
+        .then(family => (dispatch({type: 'ADD_FAMILY', payload: family })))
     }
 }
 

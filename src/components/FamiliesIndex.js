@@ -1,4 +1,5 @@
 import React from 'react'
+import FamilyShow from './FamilyShow'
 
 
 const FamiliesIndex = (props) => {
@@ -6,7 +7,7 @@ const FamiliesIndex = (props) => {
 return (
     <div>
         {props.families.map(family =>
-           <li key={family.id}> {family.name} - {family.name}</li>
+           <div key={family.id}> <FamilyShow family={family}/> </div>
             )}
     </div>
 )
