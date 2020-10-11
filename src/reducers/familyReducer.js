@@ -11,16 +11,20 @@ export default function familyReducer(state = {families: []}, action ){
                 let families = state.families.map(family => {
               if (family.id == action.payload.id){
                   return action.payload
-              } else { return family }
+              } else { 
+                  return family 
+                }
             })
         return {...state, families: families}
         case 'DELETE_ITEM':
             let fams = state.families.map(family => {
                 if (family.id == action.payload.id){
                     return action.payload
-                } else { return family }
+                } else { 
+                    return family
+                 }
               })
-          return {...state, families: families}
+          return {...state, families: fams}
             
         default: 
             return state

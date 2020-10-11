@@ -11,15 +11,15 @@ const RentalItems =(props) => {
         props.deleteItem(rentalitem.id, rentalitem.family_id)
     }
 
-    const handleReserve = () => {
+    //const handleReserve = () => {
 
-    }
+    //}
 
     return(
         <div>
             Stuff
         {props.rentalitems && props.rentalitems.map(rentalitem => 
-            <li key={rentalitem.id}> {rentalitem.item_name} <button onClick={()=> {this.handleDelete(rentalitem)}}>Delete</button> <button onClick={this.handleReserve}>Reserve</button> </li>)}
+            <li key={rentalitem.id}> {rentalitem.item_name} <button onClick={()=> handleDelete(rentalitem)}>Delete</button>  </li>)}
         </div>
     )
 

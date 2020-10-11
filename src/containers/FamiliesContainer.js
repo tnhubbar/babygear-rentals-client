@@ -16,6 +16,7 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
+                <FamiliesIndex families={this.props.families} />
                 <Switch>
                 <Route path='/families/new' component={FamilyForm} />
                 <Route path='/families/:id'  render={(routerProps) => <FamilyShow {...routerProps} families={this.props.families}/> } />
