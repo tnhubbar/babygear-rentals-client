@@ -12,7 +12,7 @@ const FamilyShow = (props) => {
         <div>
         <h2>
            {family ? family.name : null} 
-           <RentalItemsContainer />
+           <RentalItemsContainer family={family}/>
 
         </h2>
         </div>
