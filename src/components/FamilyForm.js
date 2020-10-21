@@ -22,8 +22,8 @@ class FamilyForm extends React.Component{
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    This will be the Family Creation Form: <br/>
+                <form className="ListItem" onSubmit={this.handleSubmit}>
+                    New Family wishing to rent out Gear? Please complete the form below:  <br/>
                     <label> Family's Name: </label> 
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
                     <label> Family's Location </label> 

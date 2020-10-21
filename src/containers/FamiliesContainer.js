@@ -16,11 +16,12 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
-                <FamiliesIndex families={this.props.families} />
+                <FamiliesIndex families={this.props.families} /><br/>
+                <FamilyForm />
                 <Switch>
                 <Route path='/families/new' component={FamilyForm} />
                 <Route path='/families/:id'  render={(routerProps) => <FamilyShow {...routerProps} families={this.props.families}/> } />
-                <Route path='/families' render={() => <FamiliesIndex families={this.props.families}/> } />
+                <Route exact path='/families' render={() => <FamiliesIndex families={this.props.families}/> } />
                 </Switch>
             </div>
         )

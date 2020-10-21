@@ -33,7 +33,7 @@ class RentalItemForm extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="ListItem">
                 Enter Your Rental Items Here!
                 <form onSubmit={this.handleSubmit}>
                     <label>Item Name: </label>

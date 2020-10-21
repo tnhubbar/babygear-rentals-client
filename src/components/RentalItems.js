@@ -16,10 +16,11 @@ const RentalItems =(props) => {
     //}
 
     return(
-        <div>
-            Stuff
+        <div className="ListItem">
+            Current Rental Items: 
         {props.rentalitems && props.rentalitems.map(rentalitem => 
-            <li key={rentalitem.id}> {rentalitem.item_name} <button onClick={()=> handleDelete(rentalitem)}>Delete</button>  </li>)}
+            <li key={rentalitem.id}> {rentalitem.item_name}<button onClick={()=> handleDelete(rentalitem)}>Reserve</button>  </li>
+            )}
         </div>
     )
 

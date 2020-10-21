@@ -1,9 +1,24 @@
 .App {
   text-align: center;
-  background-image: url('./images/babygear.png');
+  background-image: url('./images/Bighead.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-color: #61dafb; 
 }
+
+.BoldText {
+  text-color: blue;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.ListItem {
+  text-color:black;
+  font-weight: bold; 
+  font-size: 20px;
+}
+
+
 
 .App-logo {
   height: 40vmin;
