@@ -5,6 +5,8 @@ import FamilyShow from '../components/FamilyShow.js'
 import {connect} from 'react-redux'
 import {fetchFamilies} from '../actions/fetchFamilies.js'
 import {Route, Switch} from 'react-router-dom'
+import NavBar from '../components/NavBar.js'
+import About from '../components/About.js'
 
 
 class FamiliesContainer extends React.Component{
@@ -16,12 +18,11 @@ class FamiliesContainer extends React.Component{
     render(){
         return(
             <div>
-                <FamiliesIndex families={this.props.families} /><br/>
-                <FamilyForm />
                 <Switch>
                 <Route path='/families/new' component={FamilyForm} />
                 <Route path='/families/:id'  render={(routerProps) => <FamilyShow {...routerProps} families={this.props.families}/> } />
                 <Route exact path='/families' render={() => <FamiliesIndex families={this.props.families}/> } />
+                <Route path='/' component={About} />
                 </Switch>
             </div>
         )
