@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import addFamily from '../actions/addFamily'
+import {Redirect} from 'react-router-dom'
 
 
 class FamilyForm extends React.Component{
@@ -15,8 +16,9 @@ class FamilyForm extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addFamily(this.state)
+        this.props.addFamily(this.state, this.props.history)
         this.setState({name: '', location: '', contact_number: ''})
+        
     }
 
     render(){
