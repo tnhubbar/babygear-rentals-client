@@ -9,6 +9,7 @@ import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 import familyReducer from './reducers/familyReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
