@@ -28,8 +28,6 @@ return (
            <div key={index}> <Link to={`/families/${family.id}`}> {family.name} - {family.location} </Link><br/>
            <Button />
 
-
-           <div> <button onClick={this.callApi}>Call Api</button> </div>
            <div>{family.rental_items.map(item => <li>{item.item_name}</li>)}</div>
            
            
