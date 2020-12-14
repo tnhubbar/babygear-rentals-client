@@ -23,11 +23,11 @@ callApi = () => {
 render(){
 return (
     <div className="BoldText">
+
         {this.props.families.map((family, index) =>
 
            <div key={index}> <Link to={`/families/${family.id}`}> {family.name} - {family.location} </Link><br/>
-           <Button />
-
+   
            <div>{family.rental_items.map(item => <li>{item.item_name}</li>)}</div>
            
            
