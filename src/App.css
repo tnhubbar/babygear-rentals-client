@@ -3,6 +3,14 @@
 
 }
 
+.contact {
+  text-color: blue;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: white;
+  border: 6px solid black;
+}
+
 .BoldText {
   text-color: blue;
   font-weight: bolder;
